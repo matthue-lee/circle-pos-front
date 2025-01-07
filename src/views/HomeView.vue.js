@@ -21,7 +21,7 @@ export default (await import('vue')).defineComponent({
     created() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield fetch('http://localhost:8000/books'); // Correct API endpoint
+                const response = yield fetch('https://circle-server-1oo2.onrender.com/books'); // Correct API endpoint
                 const data = yield response.json();
                 this.books = data.books; // Assign fetched books to the books array
             }

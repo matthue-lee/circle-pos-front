@@ -23,7 +23,7 @@ export default {
   },
   async created() {
     try {
-      const response = await fetch('http://localhost:8000/books') // Correct API endpoint
+      const response = await fetch('https://circle-server-1oo2.onrender.com/books') // Correct API endpoint
       const data = await response.json()
       this.books = data.books // Assign fetched books to the books array
     } catch (error) {

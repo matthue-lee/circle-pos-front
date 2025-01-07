@@ -20,7 +20,7 @@ export default (await import('vue')).defineComponent({
     created() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield fetch(`http://localhost:8000/books/${this.id}`);
+                const response = yield fetch(`https://circle-server-1oo2.onrender.com/books/${this.id}`);
                 const data = yield response.json();
                 this.book = data.book;
             }
@@ -34,7 +34,7 @@ export default (await import('vue')).defineComponent({
             return __awaiter(this, void 0, void 0, function* () {
                 try {
                     this.loading = true;
-                    const response = yield fetch(`http://localhost:8000/books/${this.id}/purchase`, {
+                    const response = yield fetch(`https://circle-server-1oo2.onrender.com/books/${this.id}/purchase`, {
                         method: "POST",
                     });
                     const result = yield response.json();
