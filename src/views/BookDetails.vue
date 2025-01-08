@@ -54,7 +54,7 @@ export default {
   },
   async created() {
     try {
-      const response = await fetch(`http://localhost:8000/books/${this.id}`);
+      const response = await fetch(`https://circle-server-1oo2.onrender.com/books/${this.id}`);
       const data = await response.json();
       this.book = data.book;
     } catch (error) {
@@ -66,7 +66,7 @@ export default {
       try {
         this.loading = true;
         const response = await fetch(
-          `http://localhost:8000/books/${this.id}/purchase`,
+          `https://circle-server-1oo2.onrender.com/books/${this.id}/purchase`,
           {
             method: "POST",
           }
